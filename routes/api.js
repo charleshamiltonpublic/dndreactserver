@@ -5,30 +5,23 @@ const Combatant = require('../models/Combatant');
 const Battle = require('../models/Battle');
 const CalculatedBattle = require('../models/CalculatedBattle');
 
-router.get("*", (req, res) => {
-    let url = path.join(__dirname, '../client/build', 'index.html');
-    if (!url.startsWith('/app/')) // since we're on local windows
-      url = url.substring(1);
-    res.sendFile(url);
-  });
+router.get('/', (req, res) => {
+    // const data = {
+    //     username: 'accimeesterlin',
+    //     age: 5
+    // };
 
-// router.get('/', (req, res) => {
-//     // const data = {
-//     //     username: 'accimeesterlin',
-//     //     age: 5
-//     // };
+    BlogPost.find({ })
+        .then((data) => {
+            console.log('Data: ', data);
+            res.json(data);
 
-//     BlogPost.find({ })
-//         .then((data) => {
-//             console.log('Data: ', data);
-//             res.json(data);
-
-//         })
-//         .catch((error) => {
-//             console.log('error: ', error);
-//         });
-//     // res.json(data);
-// });
+        })
+        .catch((error) => {
+            console.log('error: ', error);
+        });
+    // res.json(data);
+});
 
 router.post('/save', (req, res) => {
     console.log('Body: ', req.body);
