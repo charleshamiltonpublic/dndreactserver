@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "client": "cd .. && cd client && npm start",
+    "dev": "concurrently -n 'server, client' \"node server.js\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -17,5 +19,6 @@
     "mongoose": "^6.1.0",
     "morgan": "^1.10.0",
     "react-router-dom": "^5.2.0"
-  }
+  },
+  "proxy": "https://dnd-react.herokuapp.com/"
 }

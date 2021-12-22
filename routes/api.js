@@ -86,6 +86,7 @@ router.post('/battleSave', async (req, res, next) => {
             // return res.redirect('/battle?_id='+newBattle._id)
 
             var redir = { redirect: '/roll/?_id=', _id: newBattle._id, skirmish: data};
+            //console.log(redir);
             return res.json(redir);
             
             //return res.redirect('/api/battle')
@@ -123,6 +124,7 @@ router.post('/rollSave', async (req, res, next) => {
             // });  
             // return res.redirect('/battle?_id='+newBattle._id)
             var redir = { redirect: '/battle/?_id=', _id: newBattle._id, skirmish: data};
+            console.log(redir);
             return res.json(redir);
             //return res.redirect('/api/battle')
         
