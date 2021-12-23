@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path');
-const cors = require('cors');
+//const cors = require('cors');
 require("dotenv").config();
 //const cors = require('cors');
 
@@ -43,9 +43,9 @@ mongoose.connection.on('connected', () => {
 
 //Data parsing
 app.use(express.json());
-app.use(cors({
-    origin: ['https://frosty-noyce-73153e.netlify.app', 'http://localhost:3000']
-}));
+// app.use(cors({
+//     origin: ['https://frosty-noyce-73153e.netlify.app', 'http://localhost:3000']
+// }));
 app.use(express.urlencoded({extended: false}));
 //HTTP request logger
 app.use(morgan('tiny'));
