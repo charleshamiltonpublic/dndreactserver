@@ -44,7 +44,7 @@ mongoose.connection.on('connected', () => {
 //Data parsing
 app.use(express.json());
 app.use(cors({
-    origin: 'https://frosty-noyce-73153e.netlify.app'
+    origin: ['https://frosty-noyce-73153e.netlify.app', 'http://localhost:3000']
 }));
 app.use(express.urlencoded({extended: false}));
 //HTTP request logger
