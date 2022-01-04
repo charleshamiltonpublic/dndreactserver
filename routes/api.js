@@ -79,6 +79,7 @@ router.post('/battleSave', async (req, res, next) => {
                 return res.status(500).json({msg: 'Sorry, internal server error'});
             }
 
+            
             //Battle
             // return res.json({
             //     msg: 'Your battle has been saved!!!'
