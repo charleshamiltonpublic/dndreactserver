@@ -1,0 +1,4 @@
+- This is the server side of a dnd combat tracker app
+- It uses MongoDB as a backend database
+- The backend API is hosted on Heroku here: https://dnd-react.herokuapp.com/
+- The React frontend is hosted on Netlify here:  https://frosty-noyce-73153e.netlify.app/
